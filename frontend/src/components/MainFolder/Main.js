@@ -27,6 +27,11 @@ class Main extends Component{
           cityposts:postentry
           // cityposts:postentry
         });
+        Date.prototype.toDateInputValue = (function() {
+          var local = new Date(this);
+          local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+          return local.toJSON().slice(0,10);
+      });
         console.log("-----We Are Here-----")
         console.log(this.state.cityposts)
       })
