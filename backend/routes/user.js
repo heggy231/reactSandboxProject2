@@ -5,7 +5,6 @@ const
   jwt = require('jsonwebtoken'),
   controllers = require('../controllers')
 
-app.get('/', (req, res) => res.send('Hello World!'));
 
 router.post('/signup', controllers.user.signup);
 
